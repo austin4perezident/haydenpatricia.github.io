@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include _meta.html %}
+  <title>{{ site.title }}</title>
+  {% include _css.html %}
+  {% include _js.html %}
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-W7BSRV4');</script>
+</head>
+
+<body data-spy="scroll" data-offset="51">
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7BSRV4"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 text-center wrap">
+				<img src="../assets/images/profile_img.jpg" class="img-responsive img-circle center-block img-profile" alt="Responsive image">
+				<h1 class="name text-blue">{{ site.name }}</h1>
+				<div class="container-fluid">
+					<address>
+						<div class="col-sm-6 contact">
+							<span class="address">
+								<span class="glyphicon glyphicon-map-marker"></span>
+								<span class="locality"> Fontana</span>,
+		            <abbr class="region">CA</abbr>
+		            <span class="postal-code">92336</span>
+							</span>
+						</div>
+						<div class="col-sm-6 contact">
+							<a href="mailto:{{ site.email }}">
+								<span class="email">
+									<span class="glyphicon glyphicon-envelope"></span>
+									<span class="text"> {{ site.email }}</span>
+								</span>
+							</a>
+						</div>
+					</address>
+				</div>
+			  <p class="summary">
+			    {{ site.description }}
+			  </p>
+			  <div class="container-fluid">
+					<div class="col-sm-6 social">
+						<span>
+							<a class="facebook" href="{{ site.facebookURL }}" target="_blank">
+								<i class="fa fa-facebook" aria-hidden="true"></i>
+								<span class="text"> {{ site.facebookURL | replace_first: 'https://www.','' }}</span>
+							</a>
+						</span>
+					</div>
+					<div class="col-sm-6 social">
+						<span>
+							<a class="linkedin" href="{{ site.linkedinURL }}" target="_blank">
+								<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+								<span class="text"> {{ site.linkedinURL | replace_first: 'https://www.linkedin.com/','' }}</span>
+							</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% include _footer.html %}
+	</div>
+<canvas id="background-image"></canvas>
+
+</body>
+</html>
